@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  backend:
+    volumes:
+      - ..:/workspace:cached
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    environment:
+      - DATABASE_URL=postgresql://user:password@db:5432/company_db
+      - PYTHONPATH=/workspace
+
+  frontend:
+    build:
+      context: ../frontend
+      target: development
+    volumes:
+      - ../frontend:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:8000
+
+  db:
+    ports:
+      - "5432:5432"
