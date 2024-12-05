@@ -38,6 +38,25 @@ When encountering GitHub API file creation issues:
 3. Use the branch-PR workflow for changes
 ```
 
+### Error 2: Pull Request Creation
+**Error Description:** Attempt to create pull request resulted in 'Unprocessable Entity' error.
+
+**Possible Issues:**
+1. PR might already exist
+2. Branch might have no changes
+3. Base and head branch might be the same
+4. Missing required parameters
+
+**Prompt to Fix:**
+```
+Can you:
+1. Check if a PR already exists for this branch
+2. Verify the branch has commits that differ from main
+3. Ensure base and head branches are different
+4. Try creating the PR with minimal required parameters first
+5. If still failing, try using the GitHub web interface to create the PR and analyze the difference
+```
+
 ### Development Setup
 1. Clone the repository:
 ```bash
