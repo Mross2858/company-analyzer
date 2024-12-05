@@ -11,13 +11,71 @@ Currently implemented features:
 - Database integration with PostgreSQL and SQLAlchemy
 - Authentication system foundation
 - Basic data processing capabilities with pandas
+- Frontend configuration:
+  - Added Vite + React + TypeScript setup
+  - Configured Tailwind CSS with proper theme setup
+  - Integrated shadcn/ui components
+  - Set up development tools (ESLint, PostCSS)
+- Claude AI Integration:
+  - Backend API endpoint for Claude interaction
+  - Frontend chat interface
+  - Real-time communication setup
 
 ## To Do
+- [x] Add Claude AI integration
+  - [x] Create backend endpoint
+  - [x] Build frontend chat interface
+  - [ ] Add file upload capabilities
+  - [ ] Implement context-aware responses
 - [ ] Build front end with dashboard
+  - [x] Create basic dashboard layout
+  - [x] Set up frontend development environment
+  - [ ] Add real data integration
+  - [ ] Implement interactive features
+  - [ ] Add user settings and preferences
 - [ ] Ensure that the readme is properly changing after every pull request
 
+## Setup Instructions
+
+### Environment Variables
+Create a `.env` file in the backend directory with:
+```env
+DATABASE_URL=postgresql://user:password@localhost:5432/company_analyzer
+SECRET_KEY=your_secret_key
+ANTHROPIC_API_KEY=your_anthropic_api_key
+```
+
+### Backend Setup
+1. Create virtual environment:
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate  # On Windows: .\venv\Scripts\activate
+```
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+3. Start the server:
+```bash
+uvicorn app.main:app --reload
+```
+
+### Frontend Setup
+1. Install dependencies:
+```bash
+cd frontend
+npm install
+```
+
+2. Start the development server:
+```bash
+npm run dev
+```
+
 ## Errors and Solutions Log
-*(This section will be populated with encountered errors and their solutions)*
 
 ### Error 1: Initial README Creation
 **Error Description:** Initial attempts to create README using individual file creation failed due to encoding issues.
@@ -25,57 +83,50 @@ Currently implemented features:
 **Solution:**
 Used the `push_files` function instead of individual file creation, which handles the encoding properly.
 
-**Prompt for Similar Issues:**
-```
-When encountering GitHub API file creation issues:
-1. Use push_files instead of create_or_update_file for more reliable file operations
-2. Ensure content is properly formatted in UTF-8
-3. Use the branch-PR workflow for changes
-```
-
 ### Error 2: Pull Request Creation
 **Error Description:** Attempt to create pull request resulted in 'Unprocessable Entity' error.
 
-**Possible Issues:**
-1. PR might already exist
-2. Branch might have no changes
-3. Base and head branch might be the same
-4. Missing required parameters
+**Solution:**
+Work directly in feature branches and merge manually when needed.
 
-**Prompt to Fix:**
-```
-Can you:
-1. Check if a PR already exists for this branch
-2. Verify the branch has commits that differ from main
-3. Ensure base and head branches are different
-4. Try creating the PR with minimal required parameters first
-5. If still failing, try using the GitHub web interface to create the PR and analyze the difference
+### Error 3: Frontend Setup Requirements
+**Error Description:** Need to ensure proper setup for shadcn/ui components and Tailwind CSS.
+
+**Solution:**
+- Added proper configuration files
+- Set up component architecture
+- Configured build tools correctly
+
+### Error 4: Claude Integration
+**Error Description:** Need to handle API communication securely.
+
+**Solution:**
+- Created backend proxy for Claude API
+- Implemented proper error handling
+- Added loading states for better UX
+
+## API Documentation
+
+### POST /chat
+Endpoint for interacting with Claude AI.
+
+**Request Body:**
+```json
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "string"
+    }
+  ],
+  "system": "string" // Optional system message
+}
 ```
 
-### Development Setup
-1. Clone the repository:
-```bash
-git clone https://github.com/Mross2858/company-analyzer.git
-cd company-analyzer
-```
-
-2. Backend Setup:
-```bash
-cd backend
-python -m venv venv
-source venv/bin/activate  # On Windows: .\venv\Scripts\activate
-pip install -r requirements.txt
-```
-
-3. Frontend Setup:
-```bash
-cd frontend
-npm install
-```
-
-4. Environment Setup:
-Create a `.env` file in the backend directory with:
-```
-DATABASE_URL=postgresql://user:password@localhost:5432/company_analyzer
-SECRET_KEY=your_secret_key
+**Response:**
+```json
+{
+  "response": "string",
+  "error": "string" // Optional error message
+}
 ```
