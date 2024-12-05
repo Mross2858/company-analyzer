@@ -13,27 +13,43 @@ Currently implemented features:
 - Basic data processing capabilities with pandas
 
 ## To Do
-- [ ] Integrate financial data sources (Yahoo Finance, Alpha Vantage)
-- [ ] Implement user authentication flow
-- [ ] Create basic company data visualization components
-- [ ] Set up automated testing framework
-- [ ] Implement basic financial analysis features
-- [ ] Add data export capabilities
-- [ ] Create user dashboard
+- [ ] Build front end with dashboard
+- [ ] Ensure that the readme is properly changing after every pull request
 
 ## Errors and Solutions Log
 *(This section will be populated with encountered errors and their solutions)*
 
 ### Error 1: Initial README Creation
-**Error Description:** Unknown if file will be created successfully due to potential permission issues or branch protection rules.
+**Error Description:** Initial attempts to create README using individual file creation failed due to encoding issues.
+
+**Solution:**
+Used the `push_files` function instead of individual file creation, which handles the encoding properly.
+
+**Prompt for Similar Issues:**
+```
+When encountering GitHub API file creation issues:
+1. Use push_files instead of create_or_update_file for more reliable file operations
+2. Ensure content is properly formatted in UTF-8
+3. Use the branch-PR workflow for changes
+```
+
+### Error 2: Pull Request Creation
+**Error Description:** Attempt to create pull request resulted in 'Unprocessable Entity' error.
+
+**Possible Issues:**
+1. PR might already exist
+2. Branch might have no changes
+3. Base and head branch might be the same
+4. Missing required parameters
 
 **Prompt to Fix:**
 ```
 Can you:
-1. Check if the README was created successfully
-2. If not, try creating a new branch first
-3. Create the README in that branch
-4. Create a pull request to merge the changes
+1. Check if a PR already exists for this branch
+2. Verify the branch has commits that differ from main
+3. Ensure base and head branches are different
+4. Try creating the PR with minimal required parameters first
+5. If still failing, try using the GitHub web interface to create the PR and analyze the difference
 ```
 
 ### Development Setup
