@@ -1,13 +1,27 @@
 from fastapi import FastAPI, Depends, HTTPException, UploadFile, File
+from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 import pandas as pd
 from datetime import datetime
 from . import models, schemas
 from .database import SessionLocal, engine
+from .routes import claude
 
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],  # Frontend Vite default port
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Include Claude router
+app.include_router(claude.router, prefix="/api/v1", tags=["claude"])
 
 def get_db():
     db = SessionLocal()
