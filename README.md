@@ -1,1 +1,67 @@
-IyBDb21wYW55IEFuYWx5emVyCgojIyBQcm9qZWN0IE92ZXJ2aWV3CkEgZnVsbC1zdGFjayBhcHBsaWNhdGlvbiBidWlsdCB3aXRoIEZhc3RBUEkgYW5kIFJlYWN0IHRoYXQgcHJvdmlkZXMgY29tcHJlaGVuc2l2ZSBjb21wYW55IGRhdGEgYW5hbHlzaXMgY2FwYWJpbGl0aWVzLiBUaGUgcHJvamVjdCBhaW1zIHRvIGNyZWF0ZSBhbiBpbnRlcmFjdGl2ZSBwbGF0Zm9ybSBmb3IgYW5hbHl6aW5nIGNvbXBhbnkgZmluYW5jaWFsIGRhdGEsIG1hcmtldCB0cmVuZHMsIGFuZCBnZW5lcmF0aW5nIGluc2lnaHRzIHRocm91Z2ggZGF0YSB2aXN1YWxpemF0aW9uIGFuZCBhZHZhbmNlZCBhbmFseXRpY3MuCgojIyBNaWxlc3RvbmVzIEFjY29tcGxpc2hlZAoqKFRoaXMgc2VjdGlvbiB3aWxsIGJlIHVwZGF0ZWQgd2l0aCBlYWNoIHN1Y2Nlc3NmdWwgcHVsbCByZXF1ZXN0KSoKCkN1cnJlbnRseSBpbXBsZW1lbnRlZCBmZWF0dXJlczoKLSBCYXNpYyBwcm9qZWN0IHN0cnVjdHVyZSBzZXR1cCB3aXRoIEZhc3RBUEkgYmFja2VuZCBhbmQgUmVhY3QgZnJvbnRlbmQKLSBEYXRhYmFzZSBpbnRlZ3JhdGlvbiB3aXRoIFBvc3RncmVTUUwgYW5kIFNRTEFsY2hlbXkKLSBBdXRoZW50aWNhdGlvbiBzeXN0ZW0gZm91bmRhdGlvbgotIEJhc2ljIGRhdGEgcHJvY2Vzc2luZyBjYXBhYmlsaXRpZXMgd2l0aCBwYW5kYXMKCiMjIFRvIERvCi0gWyBdIEludGVncmF0ZSBmaW5hbmNpYWwgZGF0YSBzb3VyY2VzIChZYWhvbyBGaW5hbmNlLCBBbHBoYSBWYW50YWdlKQotIFsgXSBJbXBsZW1lbnQgdXNlciBhdXRoZW50aWNhdGlvbiBmbG93Ci0gWyBdIENyZWF0ZSBiYXNpYyBjb21wYW55IGRhdGEgdmlzdWFsaXphdGlvbiBjb21wb25lbnRzCi0gWyBdIFNldCB1cCBhdXRvbWF0ZWQgdGVzdGluZyBmcmFtZXdvcmsKLSBbIF0gSW1wbGVtZW50IGJhc2ljIGZpbmFuY2lhbCBhbmFseXNpcyBmZWF0dXJlcwotIFsgXSBBZGQgZGF0YSBleHBvcnQgY2FwYWJpbGl0aWVzCi0gWyBdIENyZWF0ZSB1c2VyIGRhc2hib2FyZAoKIyMgRXJyb3JzIGFuZCBTb2x1dGlvbnMgTG9nCiooVGhpcyBzZWN0aW9uIHdpbGwgYmUgcG9wdWxhdGVkIHdpdGggZW5jb3VudGVyZWQgZXJyb3JzIGFuZCB0aGVpciBzb2x1dGlvbnMpKgoKIyMjIEVycm9yIDE6IEluaXRpYWwgUkVBRE1FIENyZWF0aW9uCioqRXJyb3IgRGVzY3JpcHRpb246KiogRXJyb3IgZXhlY3V0aW5nIGNvZGU6IE1DUCBlcnJvciAtMzI2MDM6IEludmFsaWQgYXJndW1lbnRzOiBjb250ZW50LmVuY29kaW5nOiBSZXF1aXJlZCwgY29udGVudC5jb250ZW50OiBSZXF1aXJlZAoKKipQcm9tcHQgdG8gRml4OioqCmBgYApDYW4geW91OgoxLiBDcmVhdGUgYSBuZXcgYnJhbmNoIGZvciB0aGUgUkVBRE1FCjIuIEVuY29kZSB0aGUgY29udGVudCBpbiBiYXNlNjQKMy4gVHJ5IGNyZWF0aW5nIHRoZSBmaWxlIGFnYWluIHdpdGggcHJvcGVyIGVuY29kaW5nCjQuIENyZWF0ZSBhIHB1bGwgcmVxdWVzdCB0byBtZXJnZSB0aGUgY2hhbmdlcwpgYGAKCiMjIyBEZXZlbG9wbWVudCBTZXR1cAoxLiBDbG9uZSB0aGUgcmVwb3NpdG9yeToKYGBgYmFzaApnaXQgY2xvbmUgaHR0cHM6Ly9naXRodWIuY29tL01yb3NzMjg1OC9jb21wYW55LWFuYWx5emVyLmdpdApjZCBjb21wYW55LWFuYWx5emVyCmBgYAoKMi4gQmFja2VuZCBTZXR1cDoKYGBgYmFzaApjZCBiYWNrZW5kCnB5dGhvbiAtbSB2ZW52IHZlbnYKc291cmNlIHZlbnYvYmluL2FjdGl2YXRlICAjIE9uIFdpbmRvd3M6IC5cdmVudlxTY3JpcHRzXGFjdGl2YXRlCnBpcCBpbnN0YWxsIC1yIHJlcXVpcmVtZW50cy50eHQKYGBgCgozLiBGcm9udGVuZCBTZXR1cDoKYGBgYmFzaApjZCBmcm9udGVuZApucG0gaW5zdGFsbApgYGAKCjQuIEVudmlyb25tZW50IFNldHVwOgpDcmVhdGUgYSBgLmVudmAgZmlsZSBpbiB0aGUgYmFja2VuZCBkaXJlY3Rvcnkgd2l0aDoKYGBgCkRBVEFCQVNFX1VSTD1wb3N0Z3Jlc3FsOi8vdXNlcjpwYXNzd29yZEBsb2NhbGhvc3Q6NTQzMi9jb21wYW55X2FuYWx5emVyClNFQ1JFVF9LRVk9eW91cl9zZWNyZXRfa2V5CmBgYA==
+# Company Analyzer
+
+## Project Overview
+A full-stack application built with FastAPI and React that provides comprehensive company data analysis capabilities. The project aims to create an interactive platform for analyzing company financial data, market trends, and generating insights through data visualization and advanced analytics.
+
+## Milestones Accomplished
+*(This section will be updated with each successful pull request)*
+
+Currently implemented features:
+- Basic project structure setup with FastAPI backend and React frontend
+- Database integration with PostgreSQL and SQLAlchemy
+- Authentication system foundation
+- Basic data processing capabilities with pandas
+
+## To Do
+- [ ] Integrate financial data sources (Yahoo Finance, Alpha Vantage)
+- [ ] Implement user authentication flow
+- [ ] Create basic company data visualization components
+- [ ] Set up automated testing framework
+- [ ] Implement basic financial analysis features
+- [ ] Add data export capabilities
+- [ ] Create user dashboard
+
+## Errors and Solutions Log
+*(This section will be populated with encountered errors and their solutions)*
+
+### Error 1: Initial README Creation
+**Error Description:** Initial attempts to create README using individual file creation failed due to encoding issues.
+
+**Solution:**
+Used the `push_files` function instead of individual file creation, which handles the encoding properly.
+
+**Prompt for Similar Issues:**
+```
+When encountering GitHub API file creation issues:
+1. Use push_files instead of create_or_update_file for more reliable file operations
+2. Ensure content is properly formatted in UTF-8
+3. Use the branch-PR workflow for changes
+```
+
+### Development Setup
+1. Clone the repository:
+```bash
+git clone https://github.com/Mross2858/company-analyzer.git
+cd company-analyzer
+```
+
+2. Backend Setup:
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate  # On Windows: .\venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+3. Frontend Setup:
+```bash
+cd frontend
+npm install
+```
+
+4. Environment Setup:
+Create a `.env` file in the backend directory with:
+```
+DATABASE_URL=postgresql://user:password@localhost:5432/company_analyzer
+SECRET_KEY=your_secret_key
+```
