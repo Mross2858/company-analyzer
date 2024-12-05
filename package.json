@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "test:logger": "node .github/scripts/test-debug-logger.js"
+  }
+}
