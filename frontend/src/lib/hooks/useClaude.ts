@@ -23,13 +23,22 @@ export function useClaude(options: UseClaudeOptions = {}) {
         throw new Error(response.error);
       }
 
-      setMessages(prevMessages => [...prevMessages, ...response.messages]);
-      return response.messages;
+      const newMessage: ClaudeMessage = {
+        role: 'assistant',
+        content: response.content
+      };
+
+      setMessages(prevMessages => [...prevMessages, 
+        { role: 'user', content: message },
+        newMessage
+      ]);
+
+      return newMessage;
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Unknown error occurred';
       setError(errorMessage);
       options.onError?.(errorMessage);
-      return [];
+      return null;
     } finally {
       setIsLoading(false);
     }
